@@ -68,10 +68,11 @@ export LANG=ja_JP.UTF-8
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #
-alias vz="vim ~/.zshrc"
-alias ll="ls -al"
-alias pu="pushd"
-alias po="popd"
+alias ll='ls -al'
+alias pu='pushd'
+alias po='popd'
+
+alias git='hub'
 alias g='git'
 alias gs='git status'
 alias gb='git branch'
@@ -80,7 +81,7 @@ alias gct='git commit'
 alias gg='git grep'
 alias ga='git add'
 alias gd='git diff'
-alias gl='git log'
+alias gl='git log --graph'
 alias gcma='git checkout master'
 alias gfu='git fetch upstream'
 alias gfo='git fetch origin'
@@ -94,9 +95,10 @@ alias gst='git stash'
 alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
+
 alias v='vim'
 alias vi='vim'
-alias vz='vim ~/src/dotfiles/.zshrc'
+alias vz='vim ~/.zshrc'
 alias zz='source ~/.zshrc'
 
 # powerline
