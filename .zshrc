@@ -1,73 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-
-# zsh-completions
-autoload -U compinit && compinit -u
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LANG=ja_JP.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-#
+#### alias
 alias vz="vim ~/.zshrc"
 alias ll="ls -al"
 alias pu="pushd"
@@ -98,21 +31,6 @@ alias v='vim'
 alias vi='vim'
 alias vz='vim ~/src/dotfiles/.zshrc'
 alias zz='source ~/.zshrc'
-
-# powerline
-#POWERLINE_HIDE_HOST_NAME="true"
-#POWERLINE_PATH="short"
-#POWERLINE_DETECT_SSH="true"
-#POWERLINE_SHOW_GIT_ON_RIGHT="true"
-#POWERLINE_RIGHT_B="none"
-#POWERLINE_GIT_CLEAN="✔"
-#POWERLINE_GIT_DIRTY="✘"
-#POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
-#POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
-#POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
-#POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
-#POWERLINE_GIT_RENAMED="➜"
-#POWERLINE_GIT_UNMERGED="═"
 
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
@@ -145,6 +63,7 @@ setopt hist_ignore_space
 
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
+
 
 ### pyenv ###
 export PYENV_ROOT="/usr/local/var/pyenv"
