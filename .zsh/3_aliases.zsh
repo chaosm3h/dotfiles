@@ -1,0 +1,31 @@
+alias ll="ls -al"
+alias pu="pushd"
+alias po="popd"
+alias e="exit"
+
+alias git='hub'
+alias g='git'
+alias gs='git status'
+alias gb='git branch'
+alias gg='git grep'
+alias ga='git add'
+alias gl='git log --color --graph --decorate --oneline'
+alias gd='git diff'
+alias gc='git checkout'
+alias gcma='git checkout master'
+alias gct='git commit'
+alias gcm='git commit -m'
+alias gfu='git fetch upstream'
+alias gfo='git fetch origin'
+alias gmod='git merge origin/develop'
+alias gmud='git merge upstream/develop'
+alias gmom='git merge origin/master'
+alias gpo='git push origin'
+alias gpom='git push origin master'
+alias gst='git stash'
+alias gsl='git stash list'
+alias gsu='git stash -u'
+alias gsp='git stash pop'
+
+alias zz='source ~/.zshrc'
+
