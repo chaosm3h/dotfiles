@@ -13,6 +13,13 @@ if [ -d "${NDENV_ROOT}" ]; then
     eval "$(ndenv init -)"
 fi
 
+### golang environment ###
+export GOENV_ROOT="${HOME}/.goenv"
+if [ -d "${GOENV_ROOT}" ]; then
+    export PATH=${GOENV_ROOT}/bin:$PATH
+    eval "$(goenv init -)"
+fi
+
 ### tensorflow ###
 #export CUDA_HOME="/usr/local/cuda"
 #export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
