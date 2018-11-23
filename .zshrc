@@ -65,41 +65,37 @@ setopt auto_pushd
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-
 # 同時に起動したzshの間でヒストリを共有する
 setopt share_history
-
 # 直前と同じコマンドの場合は履歴に追加しない
 setopt hist_ignore_dups
-
 # 同じコマンドをヒストリに残さない
 setopt hist_ignore_all_dups
-
 # スペースから始まるコマンド行はヒストリに残さない
 setopt hist_ignore_space
-
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
 
 
 ### pyenv ###
-export PYENV_ROOT="/usr/local/var/pyenv"
-#export PYENV_ROOT="${HOME}/.pyenv"
+export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH=${PYENV_ROOT}/bin:$PATH
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
 
-### nvm ###
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+### node environment ###
+export NDENV_ROOT="${HOME}/.ndenv"
+if [ -d "${NDENV_ROOT}" ]; then
+    export PATH=${NDENV_ROOT}/bin:$PATH
+    eval "$(ndenv init -)"
+fi
 
 ### tensorflow ###
-export CUDA_HOME="/usr/local/cuda"
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
-export PATH="$CUDA_HOME/bin:$PATH"
+#export CUDA_HOME="/usr/local/cuda"
+#export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
+#export PATH="$CUDA_HOME/bin:$PATH"
 
 # Auto tmux atach
 function is_exists() { type "$1" >/dev/null 2>&1; return $?; }
