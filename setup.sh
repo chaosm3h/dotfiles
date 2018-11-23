@@ -5,19 +5,19 @@ brew install reattach-to-user-namespace
 
 # git clone
 if [ ! -d ~/.goenv ]; then
-    git clone https://github.com/syndbg/goenv.git ~/.goenv
+    hub clone syndbg/goenv.git ~/.goenv
 fi
 if [ ! -d ~/.pyenv ]; then
-    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+    hub clone pyenv/pyenv.git ~/.pyenv
 fi
 if [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ]; then
-    git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+    hub clone pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 fi
 if [ ! -d ~/.ndenv ]; then
-    git clone https://github.com/riywo/ndenv ~/.ndenv
+    hub clone riywo/ndenv ~/.ndenv
 fi
 if [ ! -d ~/.ndenv/plugins/node-build ]; then
-    git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
+    hub clone riywo/node-build.git ~/.ndenv/plugins/node-build
 fi
 
 sudo cp ./.tmux/bin/wifi /usr/local/bin/wifi
