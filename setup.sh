@@ -1,7 +1,9 @@
 #!/bin/bash
+brew install zsh
 brew install hub
 brew install tmux
 brew install reattach-to-user-namespace
+brew install direnv
 
 # git clone
 if [ ! -d ~/.goenv ]; then
@@ -22,3 +24,5 @@ fi
 
 sudo cp ./.tmux/bin/wifi /usr/local/bin/wifi
 sudo cp ./.tmux/bin/battery /usr/local/bin/battery
+
+source ./link.sh

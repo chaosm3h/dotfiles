@@ -20,6 +20,10 @@ if [ -d "${GOENV_ROOT}" ]; then
     eval "$(goenv init -)"
 fi
 
+### direnv ###
+export EDITOR=/usr/bin/vim
+eval "$(direnv hook zsh)"
+
 ### tensorflow ###
 #export CUDA_HOME="/usr/local/cuda"
 #export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
