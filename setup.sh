@@ -7,19 +7,19 @@ brew install direnv
 
 # git clone
 if [ ! -d ~/.goenv ]; then
-    hub clone syndbg/goenv ~/.goenv
+    git clone https://github.com/syndbg/goenv.git ~/.goenv
 fi
 if [ ! -d ~/.pyenv ]; then
-    hub clone pyenv/pyenv ~/.pyenv
+    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 fi
 if [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ]; then
-    hub clone pyenv/pyenv-virtualenv ~/.pyenv/plugins/pyenv-virtualenv
+    git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 fi
 if [ ! -d ~/.ndenv ]; then
-    hub clone riywo/ndenv ~/.ndenv
+    git clone https://github.com/riywo/ndenv.git ~/.ndenv
 fi
 if [ ! -d ~/.ndenv/plugins/node-build ]; then
-    hub clone riywo/node-build ~/.ndenv/plugins/node-build
+    git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
 fi
 
 sudo cp ./.tmux/bin/wifi /usr/local/bin/wifi
