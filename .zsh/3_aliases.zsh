@@ -1,3 +1,5 @@
+alias lza='less ~/.zsh/3_aliases.zsh'
+alias zz='source ~/.zshrc'
 alias git='hub'
 alias g='git'
 alias gs='git status'
@@ -27,5 +29,4 @@ alias ll="ls -al"
 alias pu="pushd"
 alias po="popd"
 alias e="exit"
-alias zz='source ~/.zshrc'
-alias lza='less ~/.zsh/3_aliases.zsh'
+alias tf="terraform"

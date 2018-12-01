@@ -1,5 +1,5 @@
 #!/bin/bash
-if !(type  > /dev/null 2>&1); then
+if [ ! -f /usr/local/zsh ]; then
     brew install zsh
 fi
 if !(type hub > /dev/null 2>&1); then
@@ -38,4 +38,10 @@ if [ ! -d ~/src/fork ]; then
     sudo cp ~/src/fork/dotfiles/.tmux/bin/wifi /usr/local/bin/wifi
     sudo cp ~/src/fork/dotfiles/.tmux/bin/battery /usr/local/bin/battery
 fi
+if [ ! -d ~/src/other ]; then
+    mkdir ~/src/other
+    git clone https://github.com/edihbrandon/RictyDiminished.git ~/src/other/RictyDiminished
+fi
+
 source ./link.sh
+
