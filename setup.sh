@@ -14,6 +14,10 @@ fi
 if !(type direnv > /dev/null 2>&1); then
     brew install direnv
 fi
+if !(type peco > /dev/null 2>&1); then
+    brew install peco
+fi
+
 # git clone
 if [ ! -d ~/.goenv ]; then
     git clone https://github.com/syndbg/goenv.git ~/.goenv

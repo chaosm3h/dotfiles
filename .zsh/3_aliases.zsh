@@ -25,6 +25,11 @@ alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
 
+alias pv='pyenv versions'
+alias piup='pip install --upgrade pip'
+alias gv='goenv versions'
+alias nv='ndenv versions'
+
 alias ll="ls -al"
 alias pu="pushd"
 alias po="popd"

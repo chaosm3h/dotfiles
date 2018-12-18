@@ -29,7 +29,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # アプリケーション起動時のアニメーションを無効化
 defaults write com.apple.dock launchanim -bool false
 # すべての（デフォルトの）アプリアイコンをDockから消去する
-#defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
 # Dashboard無効化
 #defaults write com.apple.dashboard mcx-disabled -bool true
 
