@@ -1,5 +1,7 @@
 alias lza='less ~/.zsh/3_aliases.zsh'
 alias zz='source ~/.zshrc'
+
+# git
 alias git='hub'
 alias g='git'
 alias gs='git status'
@@ -25,13 +27,23 @@ alias gsl='git stash list'
 alias gsu='git stash -u'
 alias gsp='git stash pop'
 
+# docker
+alias di='docker image'
+alias  dc='docker container'
+alias dcl='docker container ls -a'
+
+# devenv
 alias pv='pyenv versions'
 alias piup='pip install --upgrade pip'
 alias gv='goenv versions'
 alias nv='ndenv versions'
 
+# base
 alias ll="ls -al"
 alias pu="pushd"
 alias po="popd"
 alias e="exit"
 alias tf="terraform"
+
+alias cdp='pu "$(find . -type d | peco)"'
+

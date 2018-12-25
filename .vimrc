@@ -18,13 +18,10 @@ set mouse=a
 
 " シンタックスハイライト有効化
 syntax on
-highlight Normal ctermbg=black ctermfg=grey
-highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
+"highlight Normal ctermbg=black ctermfg=grey
+"highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
 "highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
-" シンタックスハイライト（白背景用）
-"highlight Normal ctermbg=grey ctermfg=black
-"highlight StatusLine term=none cterm=none ctermfg=grey ctermbg=black
-"highlight CursorLine term=none cterm=none ctermfg=darkgray ctermbg=none
+
 "set nohlsearch " 検索キーワードをハイライトしないように設定
 set cursorline " カーソルラインの強調表示を有効化
 "hi clear CursorLine " cursorlineの色を付けない
@@ -45,3 +42,17 @@ set wildmenu wildmode=list:full
 " 自動的にファイルを読み込むパスを設定 ~/.vim/userautoload/*vim
 "set runtimepath+=~/.vim/
 "runtime! userautoload/*.vim
+
+"文字コードをUFT-8に設定
+set fenc=utf-8
+" バックアップファイルを作らない
+set nobackup
+" スワップファイルを作らない
+set noswapfile
+" 編集中のファイルが変更されたら自動で読み直す
+set autoread
+
+" 自動的に閉じ括弧を入力
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
