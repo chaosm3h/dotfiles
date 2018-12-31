@@ -40,6 +40,10 @@ alias piup='pip install --upgrade pip'
 alias gv='goenv versions'
 alias nv='ndenv versions'
 
+# vim
+alias bf='cat > ~/.vim/bf'
+alias bfcat='cat ~/.vim/bf'
+
 # base
 alias ll="ls -al"
 alias pu="pushd"
@@ -47,5 +51,5 @@ alias po="popd"
 alias e="exit"
 alias tf="terraform"
 
-alias cdp='pu "$(find . -type d | peco)"'
+alias pupeco='pu "$(find . -type d | peco)"'
 

@@ -23,3 +23,7 @@ set autoread " 編集中のファイルが変更されたら自動で読み直�
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+imap <C-b> <ESC>:read ~/.vim/bf<CR>i
+nmap <C-b> :read ~/.vim/bf<CR>
+vmap <C-b> :w!~/.vim/bf<CR>
+
