@@ -1,57 +1,24 @@
+set nocompatible
 " [Backspace] で既存の文字を削除できるように設定
-"  start - 既存の文字を削除できるように設定
-"  eol - 行頭で[Backspace]を使用した場合上の行と連結
-"  indent - オートインデントモードでインデントを削除できるように設定
 set backspace=start,eol,indent
-
 " 特定のキーに行頭および行末の回りこみ移動を許可する設定
-"  b - [Backspace]  ノーマルモード ビジュアルモード
-"  s - [Space]      ノーマルモード ビジュアルモード
-"   - [→]          ノーマルモード ビジュアルモード
-"  [ - [←]          挿入モード 置換モード
-"  ] - [→]          挿入モード 置換モード
-"  ~ - ~            ノーマルモード
-set whichwrap=b,s,[,],,~
-
-" マウス機能有効化
-set mouse=a
-
-" シンタックスハイライト有効化
-syntax on
-"highlight Normal ctermbg=black ctermfg=grey
-"highlight StatusLine term=none cterm=none ctermfg=black ctermbg=grey
-"highlight CursorLine term=none cterm=none ctermfg=none ctermbg=darkgray
-
-"set nohlsearch " 検索キーワードをハイライトしないように設定
+set whichwrap=b,s,[,],<,>,~
+set mouse=a " マウス機能有効化
+syntax on " シンタックスハイライト
+set nohlsearch " 検索キーワードをハイライトしないように設定
 set cursorline " カーソルラインの強調表示を有効化
-"hi clear CursorLine " cursorlineの色を付けない
-
-" 行番号を表示
-set number
-
-" ステータスラインを表示
+set number " 行番号を表示
 set laststatus=2 " ステータスラインを常に表示
 set statusline=%F%r%h%=%l:%c(%p%%) " ステータスラインの内容
-
-" インクリメンタル検索を有効化
-set incsearch
-
-" 補完時の一覧表示機能有効化
-set wildmenu wildmode=list:full
-
-" 自動的にファイルを読み込むパスを設定 ~/.vim/userautoload/*vim
-"set runtimepath+=~/.vim/
+set incsearch " インクリメンタル検索を有効化
+set ignorecase " 検索時に大文字小文字の区別はしない
+set wildmenu wildmode=list:full " 補完時の一覧表示機能有効化
+"set runtimepath+=~/.vim/ " 自動的にファイルを読み込むパスを設定 ~/.vim/userautoload/*vim
 "runtime! userautoload/*.vim
-
-"文字コードをUFT-8に設定
-set fenc=utf-8
-" バックアップファイルを作らない
-set nobackup
-" スワップファイルを作らない
-set noswapfile
-" 編集中のファイルが変更されたら自動で読み直す
-set autoread
-
+set fenc=utf-8 "文字コードをUFT-8に設定
+set nobackup " バックアップファイルを作らない
+set noswapfile " スワップファイルを作らない
+set autoread " 編集中のファイルが変更されたら自動で読み直す
 " 自動的に閉じ括弧を入力
 imap { {}<LEFT>
 imap [ []<LEFT>
