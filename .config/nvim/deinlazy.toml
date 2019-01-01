@@ -1,0 +1,18 @@
+# 遅延ロードするプラグインの設定
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = 'context_filetype.vim'
+if = "has('nvim')"
+on_i = 1
+hook_source = '''
+source ~/.config/nvim/plugins/deoplete.rc.vim
+'''
+[[plugins]]
+repo = 'Shougo/neco-vim'
+
+[[plugins]]
+repo = 'Shougo/neoinclude.vim'
+on_if = 1

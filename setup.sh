@@ -1,20 +1,23 @@
 #!/bin/bash
-if [ ! -f /usr/local/zsh ]; then
+if [ ! -f /usr/local/bin/nvim ]; then
+    brew install neovim
+fi
+if [ ! -f /usr/local/bin/zsh ]; then
     brew install zsh
 fi
-if !(type hub > /dev/null 2>&1); then
+if [ ! -f /usr/local/bin/hub ]; then
     brew install hub
 fi
-if !(type tmux > /dev/null 2>&1); then
+if [ ! -f /usr/local/bin/tmux ]; then
     brew install tmux
 fi
-if !(type reattach-to-user-namespace > /dev/null 2>&1); then
+if [ ! -f /usr/local/bin/reattach-to-user-namespace ]; then
     brew install reattach-to-user-namespace
 fi
-if !(type direnv > /dev/null 2>&1); then
+if [ ! -f /usr/local/bin/direnv ]; then
     brew install direnv
 fi
-if !(type peco > /dev/null 2>&1); then
+if [ ! -f /usr/local/bin/peco ]; then
     brew install peco
 fi
 
