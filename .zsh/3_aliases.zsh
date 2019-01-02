@@ -41,8 +41,8 @@ alias gv='goenv versions'
 alias nv='ndenv versions'
 
 # vim
-alias bf='cat > ~/.vim/bf'
-alias bfcat='cat ~/.vim/bf'
+alias bf='cat > ~/.cache/bf'
+alias bfcat='cat ~/.cache/bf'
 
 # base
 alias ll="ls -al"

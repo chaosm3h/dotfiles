@@ -1,42 +1,18 @@
 #!/bin/bash
-if [ ! -f /usr/local/bin/nvim ]; then
-    brew install neovim
-fi
-if [ ! -f /usr/local/bin/zsh ]; then
-    brew install zsh
-fi
-if [ ! -f /usr/local/bin/hub ]; then
-    brew install hub
-fi
-if [ ! -f /usr/local/bin/tmux ]; then
-    brew install tmux
-fi
-if [ ! -f /usr/local/bin/reattach-to-user-namespace ]; then
-    brew install reattach-to-user-namespace
-fi
-if [ ! -f /usr/local/bin/direnv ]; then
-    brew install direnv
-fi
-if [ ! -f /usr/local/bin/peco ]; then
-    brew install peco
-fi
+if [ ! -f /usr/local/bin/nvim ] && brew install neovim
+if [ ! -f /usr/local/bin/zsh ] && brew install zsh
+if [ ! -f /usr/local/bin/hub ] && brew install hub
+if [ ! -f /usr/local/bin/tmux ] && brew install tmux
+if [ ! -f /usr/local/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
+if [ ! -f /usr/local/bin/direnv ] && brew install direnv
+if [ ! -f /usr/local/bin/peco ] && brew install peco
 
 # git clone
-if [ ! -d ~/.goenv ]; then
-    git clone https://github.com/syndbg/goenv.git ~/.goenv
-fi
-if [ ! -d ~/.pyenv ]; then
-    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-fi
-if [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ]; then
-    git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-fi
-if [ ! -d ~/.ndenv ]; then
-    git clone https://github.com/riywo/ndenv.git ~/.ndenv
-fi
-if [ ! -d ~/.ndenv/plugins/node-build ]; then
-    git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
-fi
+if [ ! -d ~/.goenv ] && git clone https://github.com/syndbg/goenv.git ~/.goenv
+if [ ! -d ~/.pyenv ] && git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+if [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ] && git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+if [ ! -d ~/.ndenv ] && git clone https://github.com/riywo/ndenv.git ~/.ndenv
+if [ ! -d ~/.ndenv/plugins/node-build ] && git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
 
 if [ ! -d ~/src/fork ]; then
     mkdir ~/src/fork
@@ -50,5 +26,36 @@ if [ ! -d ~/src/other ]; then
     git clone https://github.com/edihbrandon/RictyDiminished.git ~/src/other/RictyDiminished
 fi
 
-source ./link.sh
+# link files
+for f in .??*
+do
+    [ "$f" == ".git" ] && continue
+    [ "$f" == ".DS_Store" ] && continue
+    [ "$f" == ".config" ] && continue
+    if [ ! -L ~/$f ]; then
+        ln -s $PWD/$f ~/$f
+        echo "linked...~/$f"
+    fi
+done
+
+for f in .config/*
+do
+    [ "$f" == ".DS_Store" ] && continue
+    if [ ! -d ~/.config/nvim ]; then
+        ln -s $PWD/.config/nvim ~/.config/nvim
+        echo "linked...~/$f"
+    fi
+done
+
+# copy etc modules
+if [ ! -f /usr/local/bin/wifi ]; then
+    sudo cp .tmux/bin/wifi /usr/local/bin/
+    sudo chmod 755 /usr/local/bin/wifi
+    echo "copied wifi module"
+fi
+if [ ! -f /usr/local/bin/battery ]; then
+    sudo cp .tmux/bin/battery /usr/local/bin/
+    sudo chmod 755 /usr/local/bin/battery
+    echo "copied battery module"
+fi
 
