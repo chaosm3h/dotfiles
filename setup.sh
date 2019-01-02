@@ -1,18 +1,16 @@
-#!/bin/bash
-if [ ! -f /usr/local/bin/nvim ] && brew install neovim
-if [ ! -f /usr/local/bin/zsh ] && brew install zsh
-if [ ! -f /usr/local/bin/hub ] && brew install hub
-if [ ! -f /usr/local/bin/tmux ] && brew install tmux
-if [ ! -f /usr/local/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
-if [ ! -f /usr/local/bin/direnv ] && brew install direnv
-if [ ! -f /usr/local/bin/peco ] && brew install peco
+[ ! -f /usr/local/bin/zsh ] && brew install zsh
+[ ! -f /usr/local/bin/hub ] && brew install hub
+[ ! -f /usr/local/bin/tmux ] && brew install tmux
+[ ! -f /usr/local/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
+[ ! -f /usr/local/bin/direnv ] && brew install direnv
+[ ! -f /usr/local/bin/peco ] && brew install peco
 
 # git clone
-if [ ! -d ~/.goenv ] && git clone https://github.com/syndbg/goenv.git ~/.goenv
-if [ ! -d ~/.pyenv ] && git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-if [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ] && git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-if [ ! -d ~/.ndenv ] && git clone https://github.com/riywo/ndenv.git ~/.ndenv
-if [ ! -d ~/.ndenv/plugins/node-build ] && git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
+[ ! -d ~/.goenv ] && git clone https://github.com/syndbg/goenv.git ~/.goenv
+[ ! -d ~/.pyenv ] && git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+[ ! -d ~/.pyenv/plugins/pyenv-virtualenv ] && git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+[ ! -d ~/.ndenv ] && git clone https://github.com/riywo/ndenv.git ~/.ndenv
+[ ! -d ~/.ndenv/plugins/node-build ] && git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
 
 if [ ! -d ~/src/fork ]; then
     mkdir ~/src/fork
@@ -30,6 +28,7 @@ fi
 for f in .??*
 do
     [ "$f" == ".git" ] && continue
+    [ "$f" == ".gitignore" ] && continue
     [ "$f" == ".DS_Store" ] && continue
     [ "$f" == ".config" ] && continue
     if [ ! -L ~/$f ]; then
