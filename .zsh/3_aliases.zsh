@@ -1,4 +1,5 @@
 alias lza='less ~/.zsh/3_aliases.zsh'
+alias pupeco='pu "$(find . -type d | peco)"'
 alias zz='source ~/.zshrc'
 
 # git
@@ -38,11 +39,12 @@ alias dcm='docker-compose'
 alias pv='pyenv versions'
 alias piup='pip install --upgrade pip'
 alias gv='goenv versions'
-alias nv='ndenv versions'
+alias ndv='ndenv versions'
 
 # vim
 alias bf='cat > ~/.cache/bf'
 alias bfcat='cat ~/.cache/bf'
+alias nv='nvim'
 
 # base
 alias ll="ls -al"
@@ -50,6 +52,4 @@ alias pu="pushd"
 alias po="popd"
 alias e="exit"
 alias tf="terraform"
-
-alias pupeco='pu "$(find . -type d | peco)"'
 

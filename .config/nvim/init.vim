@@ -31,7 +31,7 @@ endif
 " end dein settings-------------------
 
 filetype plugin indent on
-"syntax enable
+syntax enable
 
 runtime! ./options.rc.vim
 runtime! ./keymap.rc.vim
