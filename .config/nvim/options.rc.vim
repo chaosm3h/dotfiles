@@ -17,4 +17,6 @@ set noswapfile " スワップファイルを作らない
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
-imap <C-b> <ESC>:read ~/.vim/bf<CR>i
+imap <C-b> <ESC>:read ~/.cache/bf<CR>i
+nmap <C-b> :read ~/.cache/bf<CR>
+vmap <C-b> :w!~/.cache/bf<CR>
