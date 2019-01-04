@@ -2,6 +2,7 @@
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
+# 単語補完フレームワーク
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 depends = 'context_filetype.vim'
@@ -10,9 +11,18 @@ on_i = 1
 hook_source = '''
 source ~/.config/nvim/plugins/deoplete.rc.vim
 '''
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+
 [[plugins]]
 repo = 'Shougo/neco-vim'
 
 [[plugins]]
 repo = 'Shougo/neoinclude.vim'
 on_if = 1
+
+# ヘルプの日本語化
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+

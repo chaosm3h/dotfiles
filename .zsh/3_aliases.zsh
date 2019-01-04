@@ -45,6 +45,7 @@ alias ndv='ndenv versions'
 alias bf='cat > ~/.cache/bf'
 alias bfcat='cat ~/.cache/bf'
 alias nv='nvim'
+alias cheet='nvim ~/src/dotfiles/cheets.md'
 
 # base
 alias ll="ls -al"

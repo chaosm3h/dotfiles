@@ -19,6 +19,8 @@ set fenc=utf-8 "文字コードをUFT-8に設定
 set nobackup " バックアップファイルを作らない
 set noswapfile " スワップファイルを作らない
 set autoread " 編集中のファイルが変更されたら自動で読み直す
+set nrformats= "全ての数値を10進数として認識
+
 " 自動的に閉じ括弧を入力
 imap { {}<LEFT>
 imap [ []<LEFT>
