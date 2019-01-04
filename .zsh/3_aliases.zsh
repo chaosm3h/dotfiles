@@ -39,12 +39,12 @@ alias dcm='docker-compose'
 alias pv='pyenv versions'
 alias piup='pip install --upgrade pip'
 alias gv='goenv versions'
-alias ndv='ndenv versions'
+alias nv='ndenv versions'
 
 # vim
 alias bf='cat > ~/.cache/bf'
 alias bfcat='cat ~/.cache/bf'
-alias nv='nvim'
+alias v='nvim'
 alias cheet='nvim ~/src/dotfiles/cheets.md'
 
 # base

@@ -11,6 +11,9 @@ set noswapfile " スワップファイルを作らない
 " set laststatus=2 " ステータスラインを常に表示
 " set statusline=%F%r%h%=%l:%c(%p%%) " ステータスラインの内容
 set helplang=ja,en " helpの日本語化
+filetype plugin indent on
+let g:python_host_prog = '~/.pyenv/versions/2.7.15/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.7.1/bin/python'
 
 " 検索＆置換系-------------------
 set incsearch " インクリメンタル検索を有効化
@@ -38,11 +41,8 @@ vmap <C-b> :w!~/.cache/bf<CR>
 
 " === gruvbox start ===
 colorscheme gruvbox
-
-"set background=dark
-"let g:gruvbox_contrast_dark = 'soft'
 set background=light
-let g:gruvbox_contrast_light = 'soft'
+let g:gruvbox_contrast_light = 'hard'
 set t_Co=256            " gruvboxをカラースキーマにするときに必要！
 let g:ligthline = { 'colorscheme': 'gruvbox' }
 " === gruvbox end ===

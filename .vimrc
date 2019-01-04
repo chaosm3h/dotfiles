@@ -1,10 +1,12 @@
 set nocompatible
+"set termguicolors
 " [Backspace] で既存の文字を削除できるように設定
 set backspace=start,eol,indent
 " 特定のキーに行頭および行末の回りこみ移動を許可する設定
 set whichwrap=b,s,[,],<,>,~
 set mouse=a " マウス機能有効化
-syntax on " シンタックスハイライト
+syntax on " シンタックスハイライト（デフォルトの色を使用）
+"syntax enable " シンタックスハイライト（現在の色設定を使用）
 set nohlsearch " 検索キーワードをハイライトしないように設定
 set cursorline " カーソルラインの強調表示を有効化
 set number " 行番号を表示

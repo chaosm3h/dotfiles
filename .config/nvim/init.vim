@@ -1,7 +1,6 @@
 if &compatible
   set nocompatible
 endif
-set termguicolors
 
 " dein settings-----------------
 let s:dein_cache_path = expand('~/.cache/nvim/dein')
@@ -29,9 +28,6 @@ if dein#check_install()
   call dein#install()
 endif
 " end dein settings-------------------
-
-filetype plugin indent on
-syntax enable
 
 runtime! ./options.rc.vim
 runtime! ./keymap.rc.vim

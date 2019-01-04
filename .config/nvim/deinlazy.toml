@@ -1,28 +1,28 @@
 # 遅延ロードするプラグインの設定
-[[plugins]]
+
+[[plugins]] #ファイルや文字列検索の統合インターフェース
+repo = 'Shougo/denite.nvim'
+
+[[plugins]] # ファイルビューワー
+repo = 'scrooloose/nerdtree'
+
+[[plugins]] #カーソル位置のコンテキストのftを判定するライブラリ
 repo = 'Shougo/context_filetype.vim'
 
-# 単語補完フレームワーク
-[[plugins]]
+[[plugins]] # 単語補完フレームワーク
 repo = 'Shougo/deoplete.nvim'
 depends = 'context_filetype.vim'
 if = "has('nvim')"
 on_i = 1
 hook_source = '''
-source ~/.config/nvim/plugins/deoplete.rc.vim
+    source ~/.config/nvim/plugins/deoplete.rc.vim
 '''
 
-[[plugins]]
+[[plugins]] # Python用deoplete （Python補完、静的解析はjediだが、これに内包されている）
 repo = 'zchee/deoplete-jedi'
 
-[[plugins]]
-repo = 'Shougo/neco-vim'
-
-[[plugins]]
-repo = 'Shougo/neoinclude.vim'
-on_if = 1
-
-# ヘルプの日本語化
-[[plugins]]
+[[plugins]] # ヘルプの日本語化
 repo = 'vim-jp/vimdoc-ja'
 
+[[plugins]] # vimscript for creating gist
+repo = 'mattn/gist-vim'
