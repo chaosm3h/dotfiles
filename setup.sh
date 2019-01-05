@@ -25,6 +25,7 @@ fi
 if [ ! -d ~/src/other ]; then
     mkdir ~/src/other
     git clone https://github.com/edihbrandon/RictyDiminished.git ~/src/other/RictyDiminished
+    git clone https://github.com/mzyy94/RictyDiminished-for-Powerline.git ~/src/other/RictyDiminished-for-Powerline
 fi
 
 # link files

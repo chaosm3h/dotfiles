@@ -1,11 +1,17 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]] # enable vcs for airline
+repo = 'tpope/vim-fugitive'
+
 [[plugins]] # color scheme
 repo = 'morhetz/gruvbox'
 
 [[plugins]] # theme of status line
 repo = 'vim-airline/vim-airline'
+
+[[plugins]] # theme of airline
+repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
