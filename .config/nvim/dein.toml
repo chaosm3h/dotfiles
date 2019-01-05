@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]] # enable vcs for airline
+[[plugins]] # Gitの各種コマンドを実行できるようにする
 repo = 'tpope/vim-fugitive'
 
 [[plugins]] # color scheme

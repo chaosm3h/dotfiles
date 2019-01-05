@@ -1,4 +1,6 @@
-# brew install vim --with-lua --with-python3
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_DATA_HOME=${HOME}/.local/share
 #export PATH='/usr/local/opt/gettext/bin:$PATH'
 #export LDFLAGS="-L/usr/local/opt/gettext/lib"
 #export CPPFLAGS="-I/usr/local/opt/gettext/include"

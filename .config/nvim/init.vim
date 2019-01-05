@@ -3,7 +3,8 @@ if &compatible
 endif
 
 " dein settings-----------------
-let s:dein_cache_path = expand('~/.cache/nvim/dein')
+let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
+let s:dein_cache_path = s:cache_home . '/nvim/dein'
 let s:dein_dir = s:dein_cache_path . '/repos/github.com/Shougo/dein.vim'
 
 if &runtimepath !~ '/dein.vim'
@@ -24,7 +25,7 @@ if dein#load_state(s:dein_cache_path)
   call dein#save_state()
 endif
 
-if dein#check_install()
+if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 " end dein settings-------------------

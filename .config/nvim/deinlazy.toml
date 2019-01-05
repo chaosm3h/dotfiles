@@ -6,8 +6,12 @@ repo = 'Shougo/denite.nvim'
 [[plugins]] # ファイルビューワー
 repo = 'scrooloose/nerdtree'
 
-[[plugins]] #カーソル位置のコンテキストのftを判定するライブラリ
+[[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
 repo = 'Shougo/context_filetype.vim'
+
+[[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
 
 [[plugins]] # 単語補完フレームワーク
 repo = 'Shougo/deoplete.nvim'
