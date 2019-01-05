@@ -6,12 +6,21 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]] # color scheme
 repo = 'morhetz/gruvbox'
+hook_add = '''
+    source $XDG_CONFIG_HOME/nvim/plugins/gruvbox.rc.vim
+'''
 
 [[plugins]] # theme of status line
 repo = 'vim-airline/vim-airline'
+hook_add = '''
+    source $XDG_CONFIG_HOME/nvim/plugins/airline.rc.vim
+'''
 
 [[plugins]] # theme of airline
 repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+    let g:airline_theme = 'gruvbox'
+'''
 
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'

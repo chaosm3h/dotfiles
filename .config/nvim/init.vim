@@ -31,6 +31,5 @@ endif
 " end dein settings-------------------
 
 runtime! ./options.rc.vim
-runtime! ./plugins.rc.vim
 runtime! ./keymap.rc.vim
 runtime! ./functions.rc.vim
