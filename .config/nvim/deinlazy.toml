@@ -24,5 +24,9 @@ repo = 'zchee/deoplete-jedi'
 [[plugins]] # ヘルプの日本語化
 repo = 'vim-jp/vimdoc-ja'
 
+[[plugins]] # An Interface to WEB APIs.
+repo = 'mattn/webapi-vim'
+
 [[plugins]] # vimscript for creating gist
 repo = 'mattn/gist-vim'
+depends = 'webapi-vim'
