@@ -1,7 +1,3 @@
-alias lza='less ~/.zsh/3_aliases.zsh'
-alias pupeco='pu "$(find . -type d | peco)"'
-alias zz='source ~/.zshrc'
-
 # git
 alias git='hub'
 alias g='git'
@@ -53,4 +49,10 @@ alias pu="pushd"
 alias po="popd"
 alias e="exit"
 alias tf="terraform"
+
+# etc
+alias mkm='pu ~/src/fork/qmk_firmware;v keyboards/crkbd/keymaps/chaosm3h/keymap.c;make crkbd:chaosm3h:avrdude'
+alias pupeco='pu "$(find . -type d | peco)"'
+alias lza='less ~/.zsh/3_aliases.zsh'
+alias zz='source ~/.zshrc'
 
