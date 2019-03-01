@@ -1,11 +1,13 @@
+#!/bin/sh
 # brew
-if [ $(uname) != "Darwin" ] ; then
+if [ $(uname) = "Darwin" ] ; then
   [ ! -f /usr/local/bin/zsh ] && brew install zsh
   [ ! -f /usr/local/bin/hub ] && brew install hub
   [ ! -f /usr/local/bin/tmux ] && brew install tmux
   [ ! -f /usr/local/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
   [ ! -f /usr/local/bin/direnv ] && brew install direnv
   [ ! -f /usr/local/bin/peco ] && brew install peco
+  [ ! -f /usr/local/bin/nvim ] && brew install nvim
 fi
 
 # git clone
@@ -40,6 +42,10 @@ do
         echo "linked...~/$f"
     fi
 done
+
+if [ ! -d ~/.config ]; then
+    mkdir ~/.config
+fi
 
 for f in .config/*
 do

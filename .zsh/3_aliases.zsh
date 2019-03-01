@@ -34,7 +34,6 @@ alias dcm='docker-compose'
 
 # devenv
 alias pv='pyenv versions'
-alias piup='pip install --upgrade pip'
 alias gv='goenv versions'
 alias nv='ndenv versions'
 
@@ -58,3 +57,4 @@ alias pupeco='pu "$(find . -type d | peco)"'
 alias lza='less ~/.zsh/3_aliases.zsh'
 alias zz='source ~/.zshrc'
 alias ph='python -m http.server'
+alias jn='jupyter-notebook'
