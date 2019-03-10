@@ -1,3 +1,6 @@
+### k8s ###
+source <(kubectl completion zsh)
+
 ### pyenv ###
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
