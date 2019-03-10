@@ -32,6 +32,9 @@ alias dcl='docker container ls -a'
 alias  dm='docker-machine'
 alias dcm='docker-compose'
 
+# k8s
+alias k='kubectl'
+
 # devenv
 alias pv='pyenv versions'
 alias gv='goenv versions'
