@@ -13,3 +13,8 @@ precmd () { vcs_info }
 #RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 RPROMPT='${vcs_info_msg_0_}'
 
+### k8s ###
+source <(kubectl completion zsh)
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+))
