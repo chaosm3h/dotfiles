@@ -47,7 +47,7 @@ alias v='nvim'
 alias cheet='nvim ~/src/chaosm3h/dotfiles/cheets.md'
 
 # base
-alias ll="ls -al"
+alias ll="ls -lAh --time-style=+%Y-%m-%d\ %H:%M:%S --color=auto"
 alias pu="pushd"
 alias po="popd"
 alias e="exit"

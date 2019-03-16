@@ -1,3 +1,5 @@
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
@@ -11,4 +13,4 @@ export XDG_DATA_HOME=${HOME}/.local/share
 #export PATH="/usr/local/opt/sqlite/bin:$PATH"
 #export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 #export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-
+eval $(dircolors ~/src/other/dircolors-solarized/dircolors.ansi-dark)

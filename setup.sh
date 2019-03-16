@@ -9,6 +9,7 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -f /usr/local/bin/peco ] && brew install peco
   [ ! -f /usr/local/bin/nvim ] && brew install nvim
   [ ! -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ] && brew install kube-ps1
+  [ ! -d /usr/local/opt/coreutils ] && brew install coreutils 
 fi
 
 # git clone
