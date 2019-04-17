@@ -14,3 +14,7 @@ export XDG_DATA_HOME=${HOME}/.local/share
 #export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 #export CPPFLAGS="-I/usr/local/opt/sqlite/include"
 eval $(dircolors ~/src/other/dircolors-solarized/dircolors.ansi-dark)
+
+# jumanpp
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"

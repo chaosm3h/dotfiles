@@ -30,3 +30,6 @@ eval "$(direnv hook zsh)"
 #export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 #export PATH="$CUDA_HOME/bin:$PATH"
 
+### jumanpp ###
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
