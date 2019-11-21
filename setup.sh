@@ -16,8 +16,6 @@ fi
 [ ! -d ~/.goenv ] && git clone https://github.com/syndbg/goenv.git ~/.goenv
 [ ! -d ~/.pyenv ] && git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 [ ! -d ~/.pyenv/plugins/pyenv-virtualenv ] && git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-[ ! -d ~/.ndenv ] && git clone https://github.com/riywo/ndenv.git ~/.ndenv
-[ ! -d ~/.ndenv/plugins/node-build ] && git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
 
 if [ ! -d ~/src/fork ]; then
     mkdir ~/src/fork
