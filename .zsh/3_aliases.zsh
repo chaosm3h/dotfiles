@@ -40,6 +40,7 @@ alias k='kubectl'
 # devenv
 alias pv='pyenv versions'
 alias gv='goenv versions'
+alias nv='nvm ls'
 
 # vim
 alias bf='cat > ~/.cache/bf'
