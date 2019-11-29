@@ -28,9 +28,12 @@ alias gsu='git stash -u'
 alias gsp='git stash pop'
 
 # docker
-alias  di='docker image'
 alias dcn='docker container'
 alias dcl='docker container ls -a'
+alias  di='docker images'
+alias  ds='docker stop'
+alias dps='docker ps'
+alias dri='docker rmi'
 alias  dm='docker-machine'
 alias dcm='docker-compose'
 
@@ -40,6 +43,7 @@ alias k='kubectl'
 # devenv
 alias pv='pyenv versions'
 alias gv='goenv versions'
+alias nv='nvm ls'
 
 # vim
 alias bf='cat > ~/.cache/bf'

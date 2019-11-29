@@ -30,6 +30,9 @@ if [ ! -d ~/src/other ]; then
     git clone https://github.com/mzyy94/RictyDiminished-for-Powerline.git ~/src/other/RictyDiminished-for-Powerline
 fi
 
+# etc
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+
 # link files
 for f in .??*
 do
