@@ -28,6 +28,7 @@ alias gsu='git stash -u'
 alias gsp='git stash pop'
 
 # docker
+alias   d='docker'
 alias  di='docker image'
 alias dcn='docker container'
 alias dcl='docker container ls -a'
