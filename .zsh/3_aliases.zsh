@@ -29,11 +29,9 @@ alias gsp='git stash pop'
 
 # docker
 alias   d='docker'
-alias  di='docker image'
-alias dcn='docker container'
-alias dcl='docker container ls -a'
+alias dcp='docker-compose'
 alias  dm='docker-machine'
-alias dcm='docker-compose'
+alias  dr='docker run'
 
 # k8s
 alias k='kubectl'
