@@ -44,6 +44,11 @@ alias pv='pyenv versions'
 alias gv='goenv versions'
 alias nv='nvm ls'
 
+# python
+alias ph='python -m http.server'
+alias jn='jupyter-notebook'
+alias pe='pyenv'
+
 # vim
 alias bf='cat > ~/.cache/bf'
 alias bfcat='cat ~/.cache/bf'
@@ -63,6 +68,4 @@ alias mkm2='pu ~/src/fork/qmk_firmware;v keyboards/dz60/keymaps/chaosm3h/keymap.
 alias pupeco='pu "$(find . -type d | peco)"'
 alias lza='less ~/.zsh/3_aliases.zsh'
 alias zz='source ~/.zshrc'
-alias ph='python -m http.server'
-alias jn='jupyter-notebook'
 alias cra='create-react-app'
