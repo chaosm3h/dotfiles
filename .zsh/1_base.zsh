@@ -1,3 +1,6 @@
+# 「complete:13: command not found: compdef」エラー回避
+autoload -Uz compinit
+compinit
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 # cdなしでディレクトリ移動
