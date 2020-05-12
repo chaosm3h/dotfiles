@@ -9,13 +9,13 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -f /usr/local/bin/peco ] && brew install peco
   [ ! -f /usr/local/bin/nvim ] && brew install nvim
   [ ! -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ] && brew install kube-ps1
-  [ ! -d /usr/local/opt/coreutils ] && brew install coreutils 
+  [ ! -d /usr/local/opt/coreutils ] && brew install coreutils
+  [ ! -d /usr/local/opt/nvm ] && brew install nvm
+  [ ! -f /usr/local/bin/pyenv ] && brew install pyenv-virtualenv 
 fi
 
 # git clone
 [ ! -d ~/.goenv ] && git clone https://github.com/syndbg/goenv.git ~/.goenv
-[ ! -d ~/.pyenv ] && git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-[ ! -d ~/.pyenv/plugins/pyenv-virtualenv ] && git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
 if [ ! -d ~/src/fork ]; then
     mkdir ~/src/fork
@@ -29,9 +29,6 @@ if [ ! -d ~/src/other ]; then
     git clone https://github.com/edihbrandon/RictyDiminished.git ~/src/other/RictyDiminished
     git clone https://github.com/mzyy94/RictyDiminished-for-Powerline.git ~/src/other/RictyDiminished-for-Powerline
 fi
-
-# etc
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 # link files
 for f in .??*
