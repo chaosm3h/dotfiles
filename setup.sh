@@ -1,21 +1,29 @@
 #!/bin/sh
 # brew
 if [ $(uname) = "Darwin" ] ; then
-  [ ! -f /usr/local/bin/zsh ] && brew install zsh
-  [ ! -f /usr/local/bin/hub ] && brew install hub
-  [ ! -f /usr/local/bin/tmux ] && brew install tmux
-  [ ! -f /usr/local/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
-  [ ! -f /usr/local/bin/direnv ] && brew install direnv
-  [ ! -f /usr/local/bin/peco ] && brew install peco
-  [ ! -f /usr/local/bin/nvim ] && brew install nvim
-  [ ! -f /usr/local/opt/kube-ps1/share/kube-ps1.sh ] && brew install kube-ps1
-  [ ! -d /usr/local/opt/coreutils ] && brew install coreutils
-  [ ! -d /usr/local/opt/nvm ] && brew install nvm
-  [ ! -f /usr/local/bin/pyenv ] && brew install pyenv-virtualenv 
+  [ ! -e /usr/local/Cellar/hub ] && brew install hub
+  [ ! -e /usr/local/Cellar/tmux ] && brew install tmux
+  [ ! -e /usr/local/Cellar/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
+  [ ! -e /usr/local/Cellar/peco ] && brew install peco
+  [ ! -e /usr/local/Cellar/neovim ] && brew install nvim
+  [ ! -e /usr/local/Cellar/coreutils ] && brew install coreutils
+  [ ! -e /usr/local/Cellar/direnv ] && brew install direnv
+  [ ! -e /usr/local/Cellar/nvm ] && brew install nvm
+  [ ! -e /usr/local/Cellar/goenv ] && brew install goenv
+  [ ! -e /usr/local/Cellar/pyenv-virtualenv ] && brew install pyenv-virtualenv 
+  [ ! -e /usr/local/Cellar/awscli ] && brew install awscli
+  [ ! -e /usr/local/Cellar/sqlite ] && brew install sqlite
+#   [ ! -e /usr/local/opt/kube-ps1/share/kube-ps1.sh ] && brew install kube-ps1
+  # Cask
+  [ ! -e /usr/local/Caskroom/atok ] && brew cask install atok
+  [ ! -e /usr/local/Caskroom/1password ] && brew cask install 1password
+  [ ! -e /usr/local/Caskroom/dropbox ] && brew cask install dropbox
+  [ ! -e /usr/local/Caskroom/visual-studio-code ] && brew cask install visual-studio-code
+  [ ! -e /usr/local/Caskroom/google-chrome ] && brew cask install google-chrome
+  [ ! -e /usr/local/Caskroom/bettertouchtool ] && brew cask install bettertouchtool
+  [ ! -e /usr/local/Caskroom/iterm2 ] && brew cask install iterm2
+  [ ! -e /usr/local/Caskroom/jetbrains-toolbox ] && brew cask install jetbrains-toolbox
 fi
-
-# git clone
-[ ! -d ~/.goenv ] && git clone https://github.com/syndbg/goenv.git ~/.goenv
 
 if [ ! -d ~/src/fork ]; then
     mkdir ~/src/fork
@@ -33,10 +41,10 @@ fi
 # link files
 for f in .??*
 do
-    [ "$f" == ".git" ] && continue
-    [ "$f" == ".gitignore" ] && continue
-    [ "$f" == ".DS_Store" ] && continue
-    [ "$f" == ".config" ] && continue
+    [ $f = ".git" ] && continue
+    [ $f = ".gitignore" ] && continue
+    [ $f = ".DS_Store" ] && continue
+    [ $f = ".config" ] && continue
     if [ ! -L ~/$f ]; then
         ln -s $PWD/$f ~/$f
         echo "linked...~/$f"
@@ -49,9 +57,9 @@ fi
 
 for f in .config/*
 do
-    [ "$f" == ".DS_Store" ] && continue
-    if [ ! -d ~/.config/nvim ]; then
-        ln -s $PWD/.config/nvim ~/.config/nvim
+    [ $f = ".DS_Store" ] && continue
+    if [ ! -d ~/$f ]; then
+        ln -s $PWD/$f ~/$f
         echo "linked...~/$f"
     fi
 done
@@ -82,11 +90,11 @@ sudo systemsetup -setrestartfreeze on
 # 自動大文字の無効化
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # クラッシュレポートの無効化
-defaults write com.apple.CrashReporter DialogType -string "none"
+defaults write com.apple.CrashReporter DialogType none
 # 時計アイコンクリック時にOSやホスト名ipを表示する
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 # Bluetoothヘッドフォン/ヘッドセットの音質を向上させる
-#defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 
