@@ -70,6 +70,6 @@ alias tf="terraform"
 alias mkm1='pu ~/src/fork/qmk_firmware;v keyboards/crkbd/keymaps/chaosm3h/keymap.c;make crkbd:chaosm3h:avrdude;po'
 alias mkm2='pu ~/src/fork/qmk_firmware;v keyboards/dz60/keymaps/chaosm3h/keymap.c;make dz60:chaosm3h:dfu;po'
 alias pupeco='pu "$(find . -type d | peco)"'
-alias lza='less ~/.zsh/3_aliases.zsh'
+alias lza='less ~/.config/zsh/3_aliases.zsh'
 alias zz='source ~/.zshrc'
 alias cra='create-react-app'
