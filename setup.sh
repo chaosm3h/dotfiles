@@ -9,7 +9,7 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -e /usr/local/Cellar/coreutils ] && brew install coreutils
   [ ! -e /usr/local/Cellar/direnv ] && brew install direnv
   [ ! -e /usr/local/Cellar/nvm ] && brew install nvm
-  [ ! -e /usr/local/Cellar/goenv ] && brew install goenv
+#  [ ! -e /usr/local/Cellar/goenv ] && brew install goenv
   [ ! -e /usr/local/Cellar/pyenv-virtualenv ] && brew install pyenv-virtualenv 
   [ ! -e /usr/local/Cellar/awscli ] && brew install awscli
   [ ! -e /usr/local/Cellar/sqlite ] && brew install sqlite
