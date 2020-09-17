@@ -40,8 +40,9 @@ alias dcp='docker-compose'
 alias  dm='docker-machine'
 alias  dr='docker run'
 
-# k8s
-alias k='kubectl'
+# terraform
+alias tfp='terraform plan'
+alias tfa='terraform apply'
 
 # devenv
 alias pv='pyenv versions'
