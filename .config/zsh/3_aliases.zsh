@@ -40,15 +40,10 @@ alias dcp='docker-compose'
 alias  dm='docker-machine'
 alias  dr='docker run'
 
-# terraform
-alias tfp='terraform plan'
-alias tfa='terraform apply -auto-approve'
-
 # devenv
 alias pv='pyenv versions'
 alias gv='goenv versions'
 alias nv='nvm ls'
-alias tv='tfenv list'
 
 # python
 alias ph='python -m http.server'
