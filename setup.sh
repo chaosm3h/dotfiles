@@ -8,11 +8,11 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -e /usr/local/Cellar/neovim ] && brew install nvim
   [ ! -e /usr/local/Cellar/coreutils ] && brew install coreutils
   [ ! -e /usr/local/Cellar/direnv ] && brew install direnv
+  [ ! -e /usr/local/Cellar/goenv ] && brew install goenv
   [ ! -e /usr/local/Cellar/nvm ] && brew install nvm
   [ ! -e /usr/local/Cellar/pyenv-virtualenv ] && brew install pyenv-virtualenv 
   [ ! -e /usr/local/Cellar/awscli ] && brew install awscli
   [ ! -e /usr/local/Cellar/sqlite ] && brew install sqlite
-  [ ! -e /usr/local/Cellar/tfenv ] && brew install tfenv
   [ ! -e /usr/local/Cellar/git-secrets ] && brew install git-secrets
   # Cask
   [ ! -e /usr/local/Caskroom/atok ] && brew cask install atok
