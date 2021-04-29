@@ -11,8 +11,10 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+### haskell ###
 export GHCUP_DIR="$HOME/.ghcup/env"
-[ -f GHC_DIR ] && source GHC_DIR # ghcup-env
+[ -f GHCUP_DIR ] && source GHCUP_DIR # ghcup-env
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
 ### direnv ###
 export EDITOR=/usr/bin/vim
