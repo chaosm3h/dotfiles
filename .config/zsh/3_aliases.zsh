@@ -59,7 +59,6 @@ alias pe='pyenv'
 alias bf='cat > ~/.cache/bf'
 alias bfcat='cat ~/.cache/bf'
 alias v='nvim'
-alias cheet='nvim ~/src/chaosm3h/dotfiles/cheets.md'
 
 # base
 alias ll="ls -lAh --time-style=+%Y-%m-%d\ %H:%M:%S --color=auto"
