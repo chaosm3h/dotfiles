@@ -82,6 +82,9 @@ if [ $(uname) != "Darwin" ] ; then
 	exit 1
 fi
 
+# haskell for Intel (https://www.haskell.org/ghcup/)
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
 ###### Base ######
 # コンソールアプリケーションの画面サイズ変更を高速にする
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001

@@ -7,3 +7,5 @@ nnoremap <S-Left>  <C-w><
 nnoremap <S-Right> <C-w>>
 nnoremap <S-Up>    <C-w>-
 nnoremap <S-Down>  <C-w>+
+
+nnoremap <silent><C-s> :NERDTreeToggle<CR>
