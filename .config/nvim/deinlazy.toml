@@ -34,3 +34,16 @@ repo = 'mattn/webapi-vim'
 [[plugins]] # vimscript for creating gist
 repo = 'mattn/gist-vim'
 depends = 'webapi-vim'
+
+[[plugins]] # markdown
+repo = 'godlygeek/tabular'
+
+[[plugins]] # markdown
+repo = 'plasticboy/vim-markdown'
+depends = 'tabular'
+
+[[plugins]]
+repo = 'rbgrouleff/bclose.vim'
+hook_source = '''
+    nnoremap <Leader>g :GHCup<CR>
+'''
