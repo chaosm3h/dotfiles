@@ -1,6 +1,7 @@
 #!/bin/sh
 # brew
 if [ $(uname) = "Darwin" ] ; then
+  [ ! -e /usr/local/Cellar/gh ] && brew install gh
   [ ! -e /usr/local/Cellar/hub ] && brew install hub
   [ ! -e /usr/local/Cellar/tmux ] && brew install tmux
   [ ! -e /usr/local/Cellar/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
