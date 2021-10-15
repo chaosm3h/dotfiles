@@ -1,28 +1,24 @@
+# tmux
+alias tl='tmux list-session'
+alias tn='tmux new-session'
+alias tk='tmux kill-session -a'
+alias ta='tmux attach-session'
+
 # git
 alias git='hub'
-alias g='git'
-alias ga='git add'
-alias gb='git branch'
+alias   g='git'
+alias  ga='git add'
+alias  gb='git branch'
 alias gba='git branch -a'  # list branches
-alias gch='git checkout'
-alias gchb='git checkout -b' # make new branch
-alias gchm='git checkout master'
-alias gcm='git commit'
-alias gcmm='git commit -m'
-alias gd='git diff'
-alias gdh='git diff HEAD'
-alias gdc='git diff --cached'
-alias gfu='git fetch upstream'
-alias gfo='git fetch origin'
-alias gg='git grep'
-alias gl='git log --color --graph --decorate --oneline'
-alias gmod='git merge origin/develop'
-alias gmud='git merge upstream/develop'
-alias gmom='git merge origin/master'
-alias gmum='git merge upstream/master'
-alias gpom='git pull origin master'
-alias gpoh='git push origin HEAD'
-alias gs='git status'
+alias gco='git checkout'
+alias  gc='git commit'
+alias gcm='git commit -m'
+alias  gd='git diff'
+alias  gf='git fetch'
+alias  gg='git grep'
+alias  gl='git log --color --graph --decorate --oneline'
+alias  gp='git pull'
+alias  gs='git status'
 alias gst='git stash'
 alias gsl='git stash list'
 alias gsu='git stash -u'
@@ -57,10 +53,15 @@ alias v='nvim'
 
 # base
 alias ll="ls -lAh --time-style=+%Y-%m-%d\ %H:%M:%S --color=auto"
-alias pu="pushd"
 alias po="popd"
 alias e="exit"
 alias tf="terraform"
+
+# gcloud
+alias gpl='gcloud projects list'
+alias gcl='gcloud config list'
+alias gcsp='gcloud config set project'
+alias gp='gcloud components'
 
 # etc
 alias mkm1='pu ~/src/fork/qmk_firmware;v keyboards/crkbd/keymaps/chaosm3h/keymap.c;make crkbd:chaosm3h:avrdude;po'

@@ -35,3 +35,9 @@ eval "$(direnv hook zsh)"
 ### jumanpp ###
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+eval "$(saml2aws --completion-script-zsh)"
+function s2a(){
+    saml2aws login --skip-prompt --profile=$@
+    eval $(saml2aws script --profile=$@)
+}
