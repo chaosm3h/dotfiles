@@ -24,6 +24,7 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -e /usr/local/Caskroom/bettertouchtool ] && brew install --cask bettertouchtool
   [ ! -e /usr/local/Caskroom/iterm2 ] && brew install --cask iterm2
   [ ! -e /usr/local/Caskroom/jetbrains-toolbox ] && brew install --cask jetbrains-toolbox
+  [ ! -e /usr/local/Caskroom/microsoft-office ] && brew install --cask microsoft-office
 fi
 
 if [ ! -d ~/src/fork ]; then
