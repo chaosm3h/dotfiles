@@ -16,14 +16,14 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -e /usr/local/Cellar/sqlite ] && brew install sqlite
   [ ! -e /usr/local/Cellar/git-secrets ] && brew install git-secrets
   # Cask
-  [ ! -e /usr/local/Caskroom/atok ] && brew cask install atok
-  [ ! -e /usr/local/Caskroom/1password ] && brew cask install 1password
-  [ ! -e /usr/local/Caskroom/dropbox ] && brew cask install dropbox
-  [ ! -e /usr/local/Caskroom/visual-studio-code ] && brew cask install visual-studio-code
-  [ ! -e /usr/local/Caskroom/google-chrome ] && brew cask install google-chrome
-  [ ! -e /usr/local/Caskroom/bettertouchtool ] && brew cask install bettertouchtool
-  [ ! -e /usr/local/Caskroom/iterm2 ] && brew cask install iterm2
-  [ ! -e /usr/local/Caskroom/jetbrains-toolbox ] && brew cask install jetbrains-toolbox
+  [ ! -e /usr/local/Caskroom/atok ] && brew install --cask atok
+  [ ! -e /usr/local/Caskroom/1password ] && brew install --cask 1password
+  [ ! -e /usr/local/Caskroom/dropbox ] && brew install --cask dropbox
+  [ ! -e /usr/local/Caskroom/visual-studio-code ] && brew install --cask visual-studio-code
+  [ ! -e /usr/local/Caskroom/google-chrome ] && brew install --cask google-chrome
+  [ ! -e /usr/local/Caskroom/bettertouchtool ] && brew install --cask bettertouchtool
+  [ ! -e /usr/local/Caskroom/iterm2 ] && brew install --cask iterm2
+  [ ! -e /usr/local/Caskroom/jetbrains-toolbox ] && brew install --cask jetbrains-toolbox
 fi
 
 if [ ! -d ~/src/fork ]; then
