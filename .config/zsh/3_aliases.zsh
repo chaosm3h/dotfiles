@@ -40,6 +40,7 @@ alias  dr='docker run'
 alias pv='pyenv versions'
 alias gv='goenv versions'
 alias nv='nvm ls'
+alias s2a='saml2aws'
 
 # python
 alias ph='python -m http.server'
