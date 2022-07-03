@@ -1,6 +1,6 @@
 autoload -Uz colors
 colors
-PROMPT='%{$fg[blue]%}%n@%~%# %{$reset_color%}'
+PROMPT='%{$fg[blue]%}%n@%(5~|%-2~/.../%1~|%~)%# %{$reset_color%}'
 
 autoload -Uz vcs_info
 setopt prompt_subst

@@ -16,12 +16,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 ### golang environment ###
-# export GOENV_ROOT="${HOME}/.goenv"
-# if [ -d "${GOENV_ROOT}" ]; then
-#    export PATH=${GOENV_ROOT}/bin:$PATH
-#    export GOPATH=${HOME}/go
-#    eval "$(goenv init -)"
-# fi
+export PATH="$HOME/go/bin:$PATH"
 
 ### haskell ###
 export GHCUP_DIR="$HOME/.ghcup/env"
@@ -32,10 +27,7 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 export EDITOR=/usr/bin/vim
 eval "$(direnv hook zsh)"
 
-### jumanpp ###
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
-export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-
+### saml2aws ###
 eval "$(saml2aws --completion-script-zsh)"
 function s2a(){
     saml2aws login --skip-prompt --profile=$@

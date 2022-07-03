@@ -13,11 +13,8 @@ export CPPFLAGS="-I/usr/local/opt/readline/include"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/sqlite/lib"
 export CPPFLAGS="-I/usr/local/opt/sqlite/include"
-eval $(dircolors ~/src/other/dircolors-solarized/dircolors.ansi-dark)
-
-# jumanpp
-export LDFLAGS="-L/usr/local/opt/icu4c/lib"
-export CPPFLAGS="-I/usr/local/opt/icu4c/include"
 
 # tmux
 export PATH="/usr/local/opt/m4/bin:$PATH"
+# 重複したPATHの削除
+typeset -U PATH
