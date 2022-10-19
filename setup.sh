@@ -1,19 +1,19 @@
 #!/bin/sh
 # brew
 if [ $(uname) = "Darwin" ] ; then
-  [ ! -e /usr/local/Cellar/gh ] && brew install gh
-  [ ! -e /usr/local/Cellar/hub ] && brew install hub
-  [ ! -e /usr/local/Cellar/tmux ] && brew install tmux
-  [ ! -e /usr/local/Cellar/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
-  [ ! -e /usr/local/Cellar/peco ] && brew install peco
-  [ ! -e /usr/local/Cellar/neovim ] && brew install nvim
-  [ ! -e /usr/local/Cellar/coreutils ] && brew install coreutils
-  [ ! -e /usr/local/Cellar/direnv ] && brew install direnv
-  [ ! -e /usr/local/Cellar/nvm ] && brew install nvm
-  [ ! -e /usr/local/Cellar/pyenv-virtualenv ] && brew install pyenv-virtualenv 
-  [ ! -e /usr/local/Cellar/awscli ] && brew install awscli
-  [ ! -e /usr/local/Cellar/sqlite ] && brew install sqlite
-  [ ! -e /usr/local/Cellar/git-secrets ] && brew install git-secrets
+  [ ! -e /opt/homebrew/bin/gh ] && brew install gh
+  [ ! -e /opt/homebrew/bin/hub ] && brew install hub
+  [ ! -e /opt/homebrew/bin/tmux ] && brew install tmux
+  [ ! -e /opt/homebrew/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
+  [ ! -e /opt/homebrew/bin/peco ] && brew install peco
+  [ ! -e /opt/homebrew/bin/neovim ] && brew install nvim
+  [ ! -e /opt/homebrew/bin/coreutils ] && brew install coreutils
+  [ ! -e /opt/homebrew/bin/direnv ] && brew install direnv
+  [ ! -e /opt/homebrew/bin/nvm ] && brew install nvm
+  [ ! -e /opt/homebrew/bin/pyenv-virtualenv ] && brew install pyenv-virtualenv 
+  [ ! -e /opt/homebrew/bin/awscli ] && brew install awscli
+  [ ! -e /opt/homebrew/bin/sqlite ] && brew install sqlite
+  [ ! -e /opt/homebrew/bin/git-secrets ] && brew install git-secrets
   # Cask
   [ ! -e /usr/local/Caskroom/atok ] && brew install --cask atok
   [ ! -e /usr/local/Caskroom/1password ] && brew install --cask 1password
