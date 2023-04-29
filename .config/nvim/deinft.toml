@@ -1,9 +1,0 @@
-# ファイルタイプ毎の設定
-[ftplugin]
-_ = '''
-'''
-
-vim = '''
-setlocal shiftwidth=2 softtabstop=2
-setlocal iskeyword+=:,#
-'''
