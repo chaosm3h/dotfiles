@@ -2,11 +2,8 @@
 # brew
 if [ $(uname) = "Darwin" ] ; then
   [ ! -e /opt/homebrew/bin/gh ] && brew install gh
-  [ ! -e /opt/homebrew/bin/hub ] && brew install hub
-  [ ! -e /opt/homebrew/bin/tmux ] && brew install tmux
   [ ! -e /opt/homebrew/bin/reattach-to-user-namespace ] && brew install reattach-to-user-namespace
   [ ! -e /opt/homebrew/bin/peco ] && brew install peco
-  [ ! -e /opt/homebrew/bin/neovim ] && brew install nvim
   [ ! -e /opt/homebrew/bin/coreutils ] && brew install coreutils
   [ ! -e /opt/homebrew/bin/direnv ] && brew install direnv
   [ ! -e /opt/homebrew/bin/nvm ] && brew install nvm
@@ -20,23 +17,9 @@ if [ $(uname) = "Darwin" ] ; then
   [ ! -e /usr/local/Caskroom/dropbox ] && brew install --cask dropbox
   [ ! -e /usr/local/Caskroom/visual-studio-code ] && brew install --cask visual-studio-code
   [ ! -e /usr/local/Caskroom/google-chrome ] && brew install --cask google-chrome
-  [ ! -e /usr/local/Caskroom/bettertouchtool ] && brew install --cask bettertouchtool
-  [ ! -e /usr/local/Caskroom/iterm2 ] && brew install --cask iterm2
   [ ! -e /usr/local/Caskroom/jetbrains-toolbox ] && brew install --cask jetbrains-toolbox
-  [ ! -e /usr/local/Caskroom/microsoft-office ] && brew install --cask microsoft-office
-fi
-
-if [ ! -d ~/src/fork ]; then
-    mkdir ~/src/fork
-    git clone https://github.com/chaosm3h/dotfiles-1.git ~/src/fork/dotfiles
-    git clone https://github.com/chaosm3h/osx-terminal.app-colors-solarized.git ~/src/fork/terminal.solarize
-    sudo cp ~/src/fork/dotfiles/.tmux/bin/wifi /usr/local/bin/wifi
-    sudo cp ~/src/fork/dotfiles/.tmux/bin/battery /usr/local/bin/battery
-fi
-if [ ! -d ~/src/other ]; then
-    mkdir ~/src/other
-    git clone https://github.com/edihbrandon/RictyDiminished.git ~/src/other/RictyDiminished
-    git clone https://github.com/mzyy94/RictyDiminished-for-Powerline.git ~/src/other/RictyDiminished-for-Powerline
+  [ ! -e /usr/local/Caskroom/microsoft-office ] && brew install --cask microsoft-officeo
+  [ ! -e /opt/homebrew/Caskroom/warp ] && brew install --cask warp
 fi
 
 # link files
@@ -64,18 +47,6 @@ do
         echo "linked...~/$f"
     fi
 done
-
-# copy etc modules
-if [ ! -f /usr/local/bin/wifi ]; then
-    sudo cp .tmux/bin/wifi /usr/local/bin/
-    sudo chmod 755 /usr/local/bin/wifi
-    echo "copied wifi module"
-fi
-if [ ! -f /usr/local/bin/battery ]; then
-    sudo cp .tmux/bin/battery /usr/local/bin/
-    sudo chmod 755 /usr/local/bin/battery
-    echo "copied battery module"
-fi
 
 # Specific settings for mac
 if [ $(uname) != "Darwin" ] ; then
